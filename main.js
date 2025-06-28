@@ -212,23 +212,33 @@ function showNotification(message, type = 'info') {
 // Skill Bars Animation
 function initSkillBars() {
     const skillBars = document.querySelectorAll('.skill-progress');
+    console.log('Found skill bars:', skillBars.length);
+    
+    // Set all skill bars to 0% width initially
+    skillBars.forEach(bar => {
+        bar.style.width = '0%';
+        console.log('Set bar to 0% width');
+    });
     
     const observer = new IntersectionObserver(function(entries) {
-        entries.forEach(entry => {
+        entries.forEach((entry, index) => {
             if (entry.isIntersecting) {
                 const progressBar = entry.target;
-                const width = progressBar.style.width;
+                const targetWidth = progressBar.getAttribute('data-width');
+                console.log('Animating bar to:', targetWidth);
                 
-                // Reset width to 0 and animate to target width
-                progressBar.style.width = '0%';
+                // Add staggered delay for each skill bar
                 setTimeout(() => {
-                    progressBar.style.width = width;
-                }, 100);
+                    progressBar.style.width = targetWidth;
+                    console.log('Set bar width to:', targetWidth);
+                }, index * 400); // 400ms delay between each skill bar
             }
         });
-    }, { threshold: 0.5 });
+    }, { threshold: 0.2, rootMargin: '0px 0px -100px 0px' });
     
-    skillBars.forEach(bar => observer.observe(bar));
+    skillBars.forEach(bar => {
+        observer.observe(bar);
+    });
 }
 
 // Navbar scroll effect
