@@ -85,6 +85,9 @@ function initContactForm() {
     const contactForm = document.querySelector('.contact-form');
     
     if (contactForm) {
+        // Initialize EmailJS
+        emailjs.init("YOUR_PUBLIC_KEY"); // Replace with your EmailJS public key
+        
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
             
@@ -97,23 +100,37 @@ function initContactForm() {
             
             // Basic validation
             if (!name || !email || !subject || !message) {
-                showNotification('Vul alle velden in', 'error');
+                showNotification('Please fill in all fields', 'error');
                 return;
             }
             
             if (!isValidEmail(email)) {
-                showNotification('Voer een geldig email adres in', 'error');
+                showNotification('Please enter a valid email address', 'error');
                 return;
             }
             
-            // Simulate form submission
-            showNotification('Bericht wordt verzonden...', 'info');
+            // Show sending notification
+            showNotification('Sending message...', 'info');
             
-            // In a real application, you would send this data to a server
-            setTimeout(() => {
-                showNotification('Bericht succesvol verzonden!', 'success');
-                contactForm.reset();
-            }, 2000);
+            // Prepare email parameters
+            const templateParams = {
+                from_name: name,
+                from_email: email,
+                subject: subject,
+                message: message,
+                to_email: 'DaanSimpelaarWM@gmail.com' // Your email address
+            };
+            
+            // Send email using EmailJS
+            emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams)
+                .then(function(response) {
+                    console.log('SUCCESS!', response.status, response.text);
+                    showNotification('Message sent successfully!', 'success');
+                    contactForm.reset();
+                }, function(error) {
+                    console.log('FAILED...', error);
+                    showNotification('Failed to send message. Please try again.', 'error');
+                });
         });
     }
 }
