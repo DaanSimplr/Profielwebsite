@@ -1,6 +1,371 @@
+// Translation System
+const translations = {
+    en: {
+        nav: {
+            about: "About Me",
+            skills: "Skills",
+            projects: "Projects",
+            coaching: "Coaching",
+            contact: "Contact"
+        },
+        hero: {
+            title: "Hello, I'm <span class=\"highlight\">Daan Simpelaar</span>",
+            subtitle: "Web Developer, Designer, Student and Personal Fitness Trainer",
+            description: "I create modern and user-friendly websites that make an impact.",
+            button1: "Take a look at my work",
+            button2: "Get in touch"
+        },
+        about: {
+            title: "About Me",
+            text1: "I'm a student web and app developer with a keen eye for detail and a love for modern technologies, with experience in HTML, CSS, JavaScript, other languages and various frameworks. I create websites that are functional, user-friendly, and built using modern best practices and accessibility guidelines. I am critical of myself, which makes me accurate in my work. Aside from web and app development, I also spend a lot of time on fitness and health, aspiring to help people with coaching and making my passion a profession. Offering years of experience in personal coaching.",
+            text2: "As a student I'm always learning and improving my skills, and I believe I have much to offer as a web/app developer."
+        },
+        skills: {
+            title: "Skills",
+            frontend: "Frontend",
+            backend: "Backend"
+        },
+        projects: {
+            title: "Projects",
+            project1: {
+                title: "Dagplanning App",
+                description: "A simple desktop app that helps you plan your day, with a calendar and a list of tasks."
+            },
+            project2: {
+                title: "Placeholder",
+                description: "Placeholder"
+            },
+            project3: {
+                title: "Placeholder",
+                description: "Placeholder"
+            },
+            liveDemo: "Live Demo",
+            code: "Code"
+        },
+        contact: {
+            title: "Contact",
+            heading: "Let's work together!",
+            description: "Are you interested in a collaboration or have a question? Feel free to contact me.",
+            location: "Waddinxveen, Netherlands",
+            form: {
+                name: "Your name",
+                email: "Your email",
+                subject: "Subject",
+                message: "Your message",
+                submit: "Send message"
+            }
+        },
+        footer: {
+            rights: "All rights reserved."
+        },
+        notifications: {
+            fillAllFields: "Please fill in all fields",
+            invalidEmail: "Please enter a valid email address",
+            sending: "Sending message...",
+            success: "Message sent successfully!",
+            error: "Failed to send message. Please try again."
+        },
+        coaching: {
+            nav: {
+                logo: "FITNESS COACHING",
+                portfolio: "Portfolio",
+                goals: "Goals",
+                approach: "Approach",
+                contact: "Contact"
+            },
+            hero: {
+                title: "TRANSFORM YOUR <span class=\"highlight\">BODY</span>",
+                subtitle: "Expert guidance for muscle building, strength gains, and weight management",
+                description: "Based on years of experience and deep knowledge in fitness, I help you achieve your body transformation goals through proven training methods and personalized nutrition strategies.",
+                button: "Start Your Transformation",
+                stat1: "Hours Trained",
+                stat2: "Clients Helped",
+                stat3: "Years Experience"
+            },
+            goals: {
+                title: "What We Focus On",
+                muscle: {
+                    title: "Muscle Building",
+                    description: "Build lean muscle mass with scientifically-proven hypertrophy training programs tailored to your body type and goals.",
+                    item1: "Progressive overload training",
+                    item2: "Optimal rep ranges for growth",
+                    item3: "Recovery optimization"
+                },
+                strength: {
+                    title: "Strength Gains",
+                    description: "Increase your overall strength with compound movements and power training that builds functional strength.",
+                    item1: "Compound exercise focus",
+                    item2: "Progressive strength building",
+                    item3: "Form and technique mastery"
+                },
+                weight: {
+                    title: "Weight Management",
+                    description: "Achieve your ideal weight through balanced nutrition and effective training that burns fat while preserving muscle.",
+                    item1: "Calorie management",
+                    item2: "Metabolic optimization",
+                    item3: "Sustainable lifestyle changes"
+                }
+            },
+            approach: {
+                title: "My Approach",
+                heading: "Knowledge-Based Coaching",
+                description: "While I don't have formal certifications, I bring years of practical experience and deep knowledge in fitness, nutrition, and body transformation. My approach is based on proven scientific principles and real-world results.",
+                point1: {
+                    title: "Scientific Foundation",
+                    description: "All training methods are based on exercise science and proven research"
+                },
+                point2: {
+                    title: "Results-Driven",
+                    description: "Focus on measurable progress and continuous improvement"
+                },
+                point3: {
+                    title: "Personalized Care",
+                    description: "Every program is tailored to your specific goals and lifestyle"
+                }
+            },
+            contact: {
+                title: "Ready to Transform?",
+                heading: "Let's Build Your Dream Body",
+                description: "Whether you want to build muscle, gain strength, or manage your weight, I'll create a personalized program that fits your lifestyle and gets you results.",
+                location: "Utrecht, Netherlands",
+                form: {
+                    name: "Your Name",
+                    email: "Your Email",
+                    phone: "Your Phone",
+                    goalDefault: "Select Your Goal",
+                    goalMuscle: "Build Muscle",
+                    goalStrength: "Gain Strength",
+                    goalWeight: "Weight Management",
+                    goalConsultation: "Free Consultation",
+                    message: "Tell me about your fitness goals and current situation...",
+                    submit: "Send Message"
+                }
+            },
+            footer: {
+                text: "Transform your body, transform your life."
+            }
+        }
+    },
+    nl: {
+        nav: {
+            about: "Over Mij",
+            skills: "Vaardigheden",
+            projects: "Projecten",
+            coaching: "Coaching",
+            contact: "Contact"
+        },
+        hero: {
+            title: "Hallo, ik ben <span class=\"highlight\">Daan Simpelaar</span>",
+            subtitle: "Web Developer, Designer en Student en Persoonlijke Fitness Trainer",
+            description: "Ik maak moderne en gebruiksvriendelijke websites die impact maken.",
+            button1: "Bekijk mijn werk",
+            button2: "Neem contact op"
+        },
+        about: {
+            title: "Over Mij",
+            text1: "Ik ben een student web- en app-ontwikkelaar met een scherp oog voor detail en een liefde voor moderne technologieën, met ervaring in HTML, CSS, JavaScript, andere talen en verschillende frameworks. Ik maak websites die functioneel, gebruiksvriendelijk zijn en gebouwd met moderne best practices en toegankelijkheidsrichtlijnen. Ik ben kritisch op mezelf, wat me accuraat maakt in mijn werk. Naast web- en app-ontwikkeling besteed ik ook veel tijd aan fitness en gezondheid, met de ambitie om mensen te helpen met coaching en mijn passie tot een beroep te maken. Met jarenlange ervaring in persoonlijke coaching.",
+            text2: "Als student leer en verbeter ik altijd mijn vaardigheden, en ik geloof dat ik veel te bieden heb als web/app-ontwikkelaar en als fitness coach."
+        },
+        skills: {
+            title: "Vaardigheden",
+            frontend: "Frontend",
+            backend: "Backend"
+        },
+        projects: {
+            title: "Projecten",
+            project1: {
+                title: "Dagplanning App",
+                description: "Een simpele desktop app die je helpt je dag te plannen, met een kalender en een lijst van taken."
+            },
+            project2: {
+                title: "Placeholder",
+                description: "Placeholder"
+            },
+            project3: {
+                title: "Placeholder",
+                description: "Placeholder"
+            },
+            liveDemo: "Live Demo",
+            code: "Code"
+        },
+        contact: {
+            title: "Contact",
+            heading: "Laten we samenwerken!",
+            description: "Ben je geïnteresseerd in een samenwerking of heb je een vraag? Neem gerust contact met me op.",
+            location: "Waddinxveen, Nederland",
+            form: {
+                name: "Uw naam",
+                email: "Uw e-mail",
+                subject: "Onderwerp",
+                message: "Uw bericht",
+                submit: "Verstuur bericht"
+            }
+        },
+        footer: {
+            rights: "Alle rechten voorbehouden."
+        },
+        notifications: {
+            fillAllFields: "Vul alle velden in",
+            invalidEmail: "Voer een geldig e-mailadres in",
+            sending: "Bericht verzenden...",
+            success: "Bericht succesvol verzonden!",
+            error: "Verzenden mislukt. Probeer het opnieuw."
+        },
+        coaching: {
+            nav: {
+                logo: "FITNESS COACHING",
+                portfolio: "Portfolio",
+                goals: "Doelen",
+                approach: "Aanpak",
+                contact: "Contact"
+            },
+            hero: {
+                title: "TRANSFORMEER JE <span class=\"highlight\">LICHAAM</span>",
+                subtitle: "Expert begeleiding voor spieropbouw, krachtwinst en gewichtsbeheer",
+                description: "Gebaseerd op jarenlange ervaring en diepgaande kennis in fitness, help ik je je lichaamstransformatiedoelen te bereiken door bewezen trainingsmethoden en gepersonaliseerde voedingsstrategieën.",
+                button: "Start Je Transformatie",
+                stat1: "Uren Getraind",
+                stat2: "Klanten Geholpen",
+                stat3: "Jaar Ervaring"
+            },
+            goals: {
+                title: "Waar We Op Focussen",
+                muscle: {
+                    title: "Spieropbouw",
+                    description: "Bouw magere spiermassa op met wetenschappelijk bewezen hypertrofie trainingsprogramma's afgestemd op jouw lichaamstype en doelen.",
+                    item1: "Progressieve overload training",
+                    item2: "Optimale rep ranges voor groei",
+                    item3: "Herstel optimalisatie"
+                },
+                strength: {
+                    title: "Krachtwinst",
+                    description: "Verhoog je algehele kracht met samengestelde bewegingen en krachttraining die functionele kracht opbouwt.",
+                    item1: "Focus op samengestelde oefeningen",
+                    item2: "Progressieve krachtopbouw",
+                    item3: "Vorm- en techniekmastery"
+                },
+                weight: {
+                    title: "Gewichtsbeheer",
+                    description: "Bereik je ideale gewicht door uitgebalanceerde voeding en effectieve training die vet verbrandt terwijl spieren behouden blijven.",
+                    item1: "Caloriebeheer",
+                    item2: "Metabole optimalisatie",
+                    item3: "Duurzame levensstijlveranderingen"
+                }
+            },
+            approach: {
+                title: "Mijn Aanpak",
+                heading: "Kennisgebaseerde Coaching",
+                description: "Hoewel ik geen formele certificeringen heb, breng ik jarenlange praktische ervaring en diepgaande kennis in fitness, voeding en lichaamstransformatie mee. Mijn aanpak is gebaseerd op bewezen wetenschappelijke principes en resultaten uit de praktijk.",
+                point1: {
+                    title: "Wetenschappelijke Basis",
+                    description: "Alle trainingsmethoden zijn gebaseerd op bewegingswetenschap en bewezen onderzoek"
+                },
+                point2: {
+                    title: "Resultaatgericht",
+                    description: "Focus op meetbare vooruitgang en continue verbetering"
+                },
+                point3: {
+                    title: "Gepersonaliseerde Zorg",
+                    description: "Elk programma is afgestemd op jouw specifieke doelen en levensstijl"
+                }
+            },
+            contact: {
+                title: "Klaar om te Transformeren?",
+                heading: "Laten We Je Droomlichaam Bouwen",
+                description: "Of je nu spieren wilt opbouwen, kracht wilt winnen of je gewicht wilt beheren, ik maak een gepersonaliseerd programma dat bij jouw levensstijl past en je resultaten geeft.",
+                location: "Utrecht, Nederland",
+                form: {
+                    name: "Uw Naam",
+                    email: "Uw E-mail",
+                    phone: "Uw Telefoon",
+                    goalDefault: "Selecteer Uw Doel",
+                    goalMuscle: "Spieropbouw",
+                    goalStrength: "Krachtwinst",
+                    goalWeight: "Gewichtsbeheer",
+                    goalConsultation: "Gratis Consultatie",
+                    message: "Vertel me over je fitnessdoelen en huidige situatie...",
+                    submit: "Verstuur Bericht"
+                }
+            },
+            footer: {
+                text: "Transformeer je lichaam, transformeer je leven."
+            }
+        }
+    }
+};
+
+// Language Management
+let currentLanguage = localStorage.getItem('language') || 'en';
+
+function setLanguage(lang) {
+    currentLanguage = lang;
+    localStorage.setItem('language', lang);
+    document.documentElement.lang = lang;
+    
+    // Update language switcher buttons
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+        if (btn.getAttribute('data-lang') === lang) {
+            btn.classList.add('active');
+        } else {
+            btn.classList.remove('active');
+        }
+    });
+    
+    // Translate all elements
+    translatePage();
+}
+
+function getNestedTranslation(key, translations) {
+    return key.split('.').reduce((obj, k) => obj && obj[k], translations);
+}
+
+function translatePage() {
+    // Translate elements with data-i18n attribute
+    document.querySelectorAll('[data-i18n]').forEach(element => {
+        const key = element.getAttribute('data-i18n');
+        const translation = getNestedTranslation(key, translations[currentLanguage]);
+        
+        if (translation) {
+            if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+                // For form inputs, we'll handle placeholders separately
+                return;
+            } else if (element.tagName === 'OPTION') {
+                // For select options, update the text content (not innerHTML to avoid issues)
+                element.textContent = translation;
+            } else {
+                element.innerHTML = translation;
+            }
+        }
+    });
+    
+    // Translate placeholders
+    document.querySelectorAll('[data-i18n-placeholder]').forEach(element => {
+        const key = element.getAttribute('data-i18n-placeholder');
+        const translation = getNestedTranslation(key, translations[currentLanguage]);
+        
+        if (translation) {
+            element.placeholder = translation;
+        }
+    });
+}
+
+function initLanguageSwitcher() {
+    // Set initial language
+    setLanguage(currentLanguage);
+    
+    // Add event listeners to language buttons
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+            const lang = this.getAttribute('data-lang');
+            setLanguage(lang);
+        });
+    });
+}
+
 // DOM Content Loaded
 document.addEventListener('DOMContentLoaded', function() {
     // Initialize all functionality
+    initLanguageSwitcher();
     initMobileNavigation();
     initSmoothScrolling();
     initScrollAnimations();
@@ -100,17 +465,20 @@ function initContactForm() {
             
             // Basic validation
             if (!name || !email || !subject || !message) {
-                showNotification('Please fill in all fields', 'error');
+                const msg = getNestedTranslation('notifications.fillAllFields', translations[currentLanguage]);
+                showNotification(msg, 'error');
                 return;
             }
             
             if (!isValidEmail(email)) {
-                showNotification('Please enter a valid email address', 'error');
+                const msg = getNestedTranslation('notifications.invalidEmail', translations[currentLanguage]);
+                showNotification(msg, 'error');
                 return;
             }
             
             // Show sending notification
-            showNotification('Sending message...', 'info');
+            const sendingMsg = getNestedTranslation('notifications.sending', translations[currentLanguage]);
+            showNotification(sendingMsg, 'info');
             
             // Prepare email parameters
             const templateParams = {
@@ -125,11 +493,13 @@ function initContactForm() {
             emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams)
                 .then(function(response) {
                     console.log('SUCCESS!', response.status, response.text);
-                    showNotification('Message sent successfully!', 'success');
+                    const successMsg = getNestedTranslation('notifications.success', translations[currentLanguage]);
+                    showNotification(successMsg, 'success');
                     contactForm.reset();
                 }, function(error) {
                     console.log('FAILED...', error);
-                    showNotification('Failed to send message. Please try again.', 'error');
+                    const errorMsg = getNestedTranslation('notifications.error', translations[currentLanguage]);
+                    showNotification(errorMsg, 'error');
                 });
         });
     }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,21 +18,25 @@
             </div>
             <ul class="nav-menu">
                 <li class="nav-item">
-                    <a href="#about" class="nav-link">About Me</a>
+                    <a href="#about" class="nav-link" data-i18n="nav.about">About Me</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#skills" class="nav-link">Skills</a>
+                    <a href="#skills" class="nav-link" data-i18n="nav.skills">Skills</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#projects" class="nav-link">Projects</a>
+                    <a href="#projects" class="nav-link" data-i18n="nav.projects">Projects</a>
                 </li>
                 <li class="nav-item">
-                    <a href="coaching.html" class="nav-link">Coaching</a>
+                    <a href="coaching.html" class="nav-link" data-i18n="nav.coaching">Coaching</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#contact" class="nav-link">Contact</a>
+                    <a href="#contact" class="nav-link" data-i18n="nav.contact">Contact</a>
                 </li>
             </ul>
+            <div class="language-switcher">
+                <button class="lang-btn active" data-lang="en">EN</button>
+                <button class="lang-btn" data-lang="nl">NL</button>
+            </div>
             <div class="hamburger">
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -45,15 +49,14 @@
     <section id="home" class="hero">
         <div class="hero-container">
             <div class="hero-content">
-                <h1 class="hero-title">Hello, I'm <span class="highlight">Daan Simpelaar</span></h1>
-                <p class="hero-subtitle">Web Developer, Designer, Student and Personal Fitness Trainer</p>
-                <p class="hero-description">
+                <h1 class="hero-title" data-i18n="hero.title">Hello, I'm <span class="highlight">Daan Simpelaar</span></h1>
+                <p class="hero-subtitle" data-i18n="hero.subtitle">Web Developer, Designer, Student and Personal Fitness Coach</p>
+                <p class="hero-description" data-i18n="hero.description">
                     I create modern and user-friendly websites that make an impact.
-                    And on top of that, I coach people on how to get in shape and stay in shape, in the most optimal way.
                 </p>
                 <div class="hero-buttons">
-                    <a href="#projects" class="btn btn-primary">Take a look at my work</a>
-                    <a href="#contact" class="btn btn-secondary">Get in touch</a>
+                    <a href="#projects" class="btn btn-primary" data-i18n="hero.button1">Take a look at my work</a>
+                    <a href="#contact" class="btn btn-secondary" data-i18n="hero.button2">Get in touch</a>
                 </div>
             </div>
             <div class="hero-image">
@@ -67,17 +70,19 @@
     <!-- About Section -->
     <section id="about" class="about">
         <div class="container">
-            <h2 class="section-title">About Me</h2>
+            <h2 class="section-title" data-i18n="about.title">About Me</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <p>
-                        I'm a passionate web developer with a keen eye for detail and a love for modern technologies, 
-                        with experience in HTML, CSS, JavaScript and various frameworks.
-                        I create websites that are not only beautiful, but also functional and user-friendly, 
-                        while making sure to follow the new crucial accessibility guidelines.
+                    <p data-i18n="about.text1">
+                        I'm a student web and app developer with a keen eye for detail and a love for modern technologies, 
+                        with experience in HTML, CSS, JavaScript, other languages and various frameworks.
+                        I create websites that are functional, user-friendly, and built using modern best practices and accessibility guidelines.
+                        I am critical of myself, which makes me accurate in my work.
+                        Aside from web and app development, I also spend a lot of time on fitness and health, aspiring to help people with coaching and making my passion a profession.
+                        Offering years of experience in personal coaching.
                     </p>
-                    <p>
-                        I believe in continuous learning and staying up-to-date with the latest trends and technologies in web development. 
+                    <p data-i18n="about.text2">
+                        As a student I'm always learning and improving my skills, and I believe I have much to offer as a web/app developer.
                     </p>
                 </div>
             </div>
@@ -87,56 +92,68 @@
     <!-- Skills Section -->
     <section id="skills" class="skills">
         <div class="container">
-            <h2 class="section-title">Skills</h2>
+            <h2 class="section-title" data-i18n="skills.title">Skills</h2>
             <div class="skills-grid">
                 <div class="skill-category">
-                    <h3>Frontend</h3>
+                    <h3 data-i18n="skills.frontend">Frontend</h3>
                     <div class="skill-items">
                         <div class="skill-item">
                             <span class="skill-name">HTML</span>
                             <div class="skill-bar">
-                                <div class="skill-progress" data-width="90%"></div>
+                                <div class="skill-progress" data-width="70%"></div>
                             </div>
                         </div>
                         <div class="skill-item">
                             <span class="skill-name">CSS</span>
                             <div class="skill-bar">
-                                <div class="skill-progress" data-width="90%"></div>
+                                <div class="skill-progress" data-width="70%"></div>
                             </div>
                         </div>
                         <div class="skill-item">
                             <span class="skill-name">JavaScript/TypeScript</span>
                             <div class="skill-bar">
-                                <div class="skill-progress" data-width="60%"></div>
+                                <div class="skill-progress" data-width="40%"></div>
                             </div>
                         </div>
                         <div class="skill-item">
                             <span class="skill-name">React</span>
                             <div class="skill-bar">
-                                <div class="skill-progress" data-width="60%"></div>
+                                <div class="skill-progress" data-width="50%"></div>
                             </div>
                         </div>
                         <div class="skill-item">
                             <span class="skill-name">Next</span>
                             <div class="skill-bar">
-                                <div class="skill-progress" data-width="40%"></div>
+                                <div class="skill-progress" data-width="20%"></div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="skill-category">
-                    <h3>Backend</h3>
+                    <h3 data-i18n="skills.backend">Backend</h3>
                     <div class="skill-items">
                         <div class="skill-item">
                             <span class="skill-name">Laravel</span>
                             <div class="skill-bar">
-                                <div class="skill-progress" data-width="30%"></div>
+                                <div class="skill-progress" data-width="40%"></div>
                             </div>
                         </div>
                         <div class="skill-item">
                             <span class="skill-name">MySQL</span>
                             <div class="skill-bar">
-                                <div class="skill-progress" data-width="30%"></div>
+                                <div class="skill-progress" data-width="20%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">ASP.NET</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="50%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">C#</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="20%"></div>
                             </div>
                         </div>
                     </div>
@@ -148,7 +165,7 @@
     <!-- Projects Section -->
     <section id="projects" class="projects">
         <div class="container">
-            <h2 class="section-title">Projects</h2>
+            <h2 class="section-title" data-i18n="projects.title">Projects</h2>
             <div class="projects-grid">
                 <div class="project-card">
                     <div class="project-image">
@@ -157,16 +174,14 @@
                         </div>
                     </div>
                     <div class="project-content">
-                        <h3>Placeholder</h3>
-                        <p>Een volledig responsive e-commerce platform gebouwd met React en Node.js.</p>
+                        <h3 data-i18n="projects.project1.title">Placeholder</h3>
+                        <p data-i18n="projects.project1.description">A simple desktop app that helps you plan your day, with a calendar and a list of tasks.</p>
                         <div class="project-tech">
-                            <span class="tech-tag">React</span>
-                            <span class="tech-tag">Node.js</span>
-                            <span class="tech-tag">MongoDB</span>
+                            <span class="tech-tag">Java</span>
                         </div>
                         <div class="project-links">
-                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                            <a href="#" class="project-link"><i class="fab fa-github"></i> Code</a>
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> <span data-i18n="projects.liveDemo">Live Demo</span></a>
+                            <a href="https://github.com/DaanSimplr/Dagplanning-app" class="project-link"><i class="fab fa-github"></i> <span data-i18n="projects.code">Code</span></a>
                         </div>
                     </div>
                 </div>
@@ -177,16 +192,16 @@
                         </div>
                     </div>
                     <div class="project-content">
-                        <h3>Placeholder</h3>
-                        <p>Een weers-app met real-time data en een moderne UI design.</p>
+                        <h3 data-i18n="projects.project2.title">Placeholder</h3>
+                        <p data-i18n="projects.project2.description">Placeholder</p>
                         <div class="project-tech">
-                            <span class="tech-tag">JavaScript</span>
-                            <span class="tech-tag">CSS3</span>
-                            <span class="tech-tag">API</span>
+                            <span class="tech-tag">Placeholder</span>
+                            <span class="tech-tag">Placeholder</span>
+                            <span class="tech-tag">Placeholder</span>
                         </div>
                         <div class="project-links">
-                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                            <a href="#" class="project-link"><i class="fab fa-github"></i> Code</a>
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> <span data-i18n="projects.liveDemo">Live Demo</span></a>
+                            <a href="#" class="project-link"><i class="fab fa-github"></i> <span data-i18n="projects.code">Code</span></a>
                         </div>
                     </div>
                 </div>
@@ -197,16 +212,16 @@
                         </div>
                     </div>
                     <div class="project-content">
-                        <h3>Placeholder</h3>
-                        <p>Een productieve task management applicatie met drag-and-drop functionaliteit.</p>
+                        <h3 data-i18n="projects.project3.title">Placeholder</h3>
+                        <p data-i18n="projects.project3.description">Placeholder</p>
                         <div class="project-tech">
-                            <span class="tech-tag">Vue.js</span>
-                            <span class="tech-tag">Firebase</span>
-                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">Placeholder</span>
+                            <span class="tech-tag">Placeholder</span>
+                            <span class="tech-tag">Placeholder</span>
                         </div>
                         <div class="project-links">
-                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                            <a href="#" class="project-link"><i class="fab fa-github"></i> Code</a>
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> <span data-i18n="projects.liveDemo">Live Demo</span></a>
+                            <a href="#" class="project-link"><i class="fab fa-github"></i> <span data-i18n="projects.code">Code</span></a>
                         </div>
                     </div>
                 </div>
@@ -217,11 +232,11 @@
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
-            <h2 class="section-title">Contact</h2>
+            <h2 class="section-title" data-i18n="contact.title">Contact</h2>
             <div class="contact-content">
                 <div class="contact-info">
-                    <h3>Let's work together!</h3>
-                    <p>Are you interested in a collaboration or have a question? Feel free to contact me.</p>
+                    <h3 data-i18n="contact.heading">Let's work together!</h3>
+                    <p data-i18n="contact.description">Are you interested in a collaboration or have a question? Feel free to contact me.</p>
                     <div class="contact-details">
                         <div class="contact-item">
                             <i class="fas fa-envelope"></i>
@@ -233,30 +248,29 @@
                         </div>
                         <div class="contact-item">
                             <i class="fas fa-map-marker-alt"></i>
-                            <span>Waddinxveen, Nederland</span>
+                            <span data-i18n="contact.location">Waddinxveen, Netherlands</span>
                         </div>
                     </div>
                     <div class="social-links">
                         <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
                         <a href="#" class="social-link"><i class="fab fa-github"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
                         <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
                 <form class="contact-form">
                     <div class="form-group">
-                        <input type="text" id="name" name="name" placeholder="Your name" required>
+                        <input type="text" id="name" name="name" data-i18n-placeholder="contact.form.name" placeholder="Your name" required>
                     </div>
                     <div class="form-group">
-                        <input type="email" id="email" name="email" placeholder="Your email" required>
+                        <input type="email" id="email" name="email" data-i18n-placeholder="contact.form.email" placeholder="Your email" required>
                     </div>
                     <div class="form-group">
-                        <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                        <input type="text" id="subject" name="subject" data-i18n-placeholder="contact.form.subject" placeholder="Subject" required>
                     </div>
                     <div class="form-group">
-                        <textarea id="message" name="message" placeholder="Your message" rows="5" required></textarea>
+                        <textarea id="message" name="message" data-i18n-placeholder="contact.form.message" placeholder="Your message" rows="5" required></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary">Send message</button>
+                    <button type="submit" class="btn btn-primary" data-i18n="contact.form.submit">Send message</button>
                 </form>
             </div>
         </div>
@@ -265,7 +279,7 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2024 Daan Simpelaar. All rights reserved.</p>
+            <p>&copy; 2024 Daan Simpelaar. <span data-i18n="footer.rights">All rights reserved.</span></p>
         </div>
     </footer>
 
