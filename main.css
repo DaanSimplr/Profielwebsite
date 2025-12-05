@@ -95,7 +95,8 @@ body {
     margin-left: 1rem;
 }
 
-.lang-btn {
+.language-switcher .lang-btn,
+button.lang-btn {
     padding: 6px 12px;
     border: 2px solid #2563eb;
     background: transparent;
@@ -106,15 +107,25 @@ body {
     cursor: pointer;
     transition: all 0.3s ease;
     font-family: inherit;
+    margin: 0;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    text-decoration: none;
+    display: inline-block;
+    line-height: 1.5;
 }
 
-.lang-btn:hover {
+.language-switcher .lang-btn:hover,
+button.lang-btn:hover {
     background: #2563eb;
     color: white;
     transform: translateY(-2px);
 }
 
-.lang-btn.active {
+.language-switcher .lang-btn.active,
+button.lang-btn.active {
     background: #2563eb;
     color: white;
 }
